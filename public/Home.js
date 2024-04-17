@@ -16,7 +16,7 @@ function logOut()
             fetch('/logout', { method: 'POST' })
             .then(response => response.json())
             .then(data => {
-                if (sum === true)
+                if (data.sum === true)
                 {
                     window.location.href ="Login";
                 }
