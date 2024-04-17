@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload = "showTime()">
+
+    <%- include('partials/header.ejs') %>
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                
+               <li> <br><br><br><br><br><br><br><br> <br> <br></li>
+                <li><a id = alink href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a class = link href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+    
+
+    <div class="content">
+       
+       <h1>Welcome to The Flea Market Adoption Center</h1>
+
+       <br><br>
+        
+                <p id = "blurbs" >
+                    At The flea Market, we believe every pet deserves a loving home, 
+                    and every home deserves the joy a pet can bring.We're not just a pet adoption service; 
+                    we're a community where animal lovers can come together to celebrate the bond between humans and their furry friends.
+                </p>
+
+                <br><br>
+        <p>Don't wait up there are many beutiful animals looking for a home!! 
+            <br>
+        </p>
+        <br>
+       
+       <a  href = "FindAPet"> <img src = "lokibeingbeutiful.JPG" height = "260" width = "195" alt = "image of a dog " ></a>
+       <a id = "FindC" href = "FindAPet">   <img src = "Martyheadphones.jpg" height = "260" width = "195" alt = "image of a cat"></a>
+
+    <br><br><br>
+    <fieldset id = "tip">
+            <legend>Tip</legend>
+
+         Click on their images to start the adoption process right now!!
+        
+    </fieldset>
+    </div>
+ 
+    <footer>
+        <%- include('partials/footer.ejs') %>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload="showTime()">
+   
+   
+    <%- include('partials/header') %>
+   
+
+
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                <li><br><br><br><br><br><br><br><br><br><br></li> 
+                <li><a class = link href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a id = alink href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a class = link href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+    
+    <div class="content">
+        
+        <h1>Here is how you take care of a dog;</h1>
+        <br>
+<table>
+
+    <tr>
+        <th><img src = "bbLoki.JPG" height="300" width = "250" alt = "picture of a baby loki"></th>    
+        <th><p id = "blurbs">
+                Caring for dogs involves commitment and understanding of their needs to ensure they lead a happy, healthy life.
+                 A nutritious diet tailored to their age, size, and activity level is fundamental. 
+                 Regular veterinary visits for vaccinations and health checks are essential to prevent diseases and address any health concerns promptly. 
+                 Exercise is crucial for a dog's physical and mental well-being, so daily walks and playtime should be part of their routine. 
+                 Training and socialization from an early age help dogs become well-behaved and sociable. 
+        </p></th>
+   
+    </tr>
+</table>
+    </div>
+  
+    <%- include('partials/footer') %>
+   
+</body>
+</html>

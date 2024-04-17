@@ -1,0 +1,236 @@
+.petImg
+{ 
+    border: 5px solid  rgb(79, 55, 85) ;
+}
+#date
+{
+    text-align: right;
+    font-size:15px;
+}
+
+#display
+{
+    text-size-adjust: 500px1;
+}
+
+.showPets
+{
+  padding: 20px;  
+}
+
+html
+{
+background-color: rgb(190, 156, 198);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    margin:0%;
+    box-sizing: border-box;
+}
+
+
+
+#logo
+{
+    float:right;
+}
+
+
+ul
+{
+list-style-type: none;
+background-color: rgb(79, 55, 85);
+float:left;
+padding:0px;
+width: 20%;
+position:fixed;
+left:0px;
+top:0px;
+height:100%;
+display:table-cell;
+vertical-align: middle;
+
+
+}
+
+.link
+{
+    display:block;
+   
+    background-color: rgb(79, 55, 85);
+    color:rgb(190, 156, 198);
+    padding : 8px 16px;
+    text-decoration: none;
+    
+   
+}
+
+
+#alink
+{
+
+    background-color: rgb(122, 72, 135);
+    color:rgb(38, 16, 43);
+    padding : 8px 16px;
+    display:block;
+    text-decoration: none;
+    
+   
+}
+
+
+.link:hover
+{
+ 
+    color: rgb(79, 55, 85);
+    background-color:rgb(190, 156, 198);
+}
+
+
+
+.content
+{
+    width:80%;
+    
+    float:right;
+    padding: 5%;
+    font-size: 20px;
+    color:rgb(59, 36, 76);
+    padding-top: 200px;
+
+}
+
+#login
+{
+    border: 4x, dotted, rgb(59, 36, 76) ;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+
+
+footer
+{
+    
+    width:100%;
+    background-color: rgb(79, 55, 85);
+    color:rgb(190, 156, 198);
+    text-align: center;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    padding:7px;
+
+}
+
+#blurbs
+{
+border: 2px dotted rgb(38, 16, 43);
+padding:5%;
+}
+
+#ContactUs
+{
+border: 2px dotted rgb(38, 16, 43);
+padding:5%;
+width: 40%;
+
+}
+
+fieldset
+{
+border: 4px  solid  rgb(79, 55, 85);
+}
+
+#age
+{
+    color: rgb(38, 16, 43);
+    background-color: rgb(190, 156, 198);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    border: 2px solid rgb(79, 55, 85);
+}
+
+.button
+{
+    color: rgb(38, 16, 43);
+    background-color: rgb(190, 156, 198);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    border: 2px solid rgb(79, 55, 85);
+
+}
+
+.button:hover
+{
+    background-color: rgb(79, 55, 85);
+    color: rgb(190, 156, 198);
+}
+
+
+legend
+{
+    font-size: 25px;
+}
+
+.TaC
+{
+    font-size: 15px;
+}
+
+#TaC
+{
+    text-decoration: none;
+    background-color: rgb(79, 55, 85);
+    color: rgb(190, 156, 198);
+
+    
+}
+
+#TaC:hover
+{
+    color: rgb(55, 37, 55);
+}
+
+
+#aTaC
+{
+    text-decoration: none;
+    color: rgb(252, 251, 252);
+    
+}
+
+textarea
+{
+    height:75px;
+    width: 415px
+}
+
+
+
+#fname , #lname, #email, textarea, input
+{
+    background-color: rgb(190, 156, 198);
+    border: 2px solid rgb(79, 55, 85);
+}
+
+
+#FindC
+{
+    position: relative;
+    right: -154px;
+}
+
+#tip
+{
+    width:600px
+    
+}
+
+.forgot
+{
+    color:rgb(95, 27, 116);
+    font-size: 14px;
+}
+
+

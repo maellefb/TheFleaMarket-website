@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload="showTime()">
+   
+   
+<%- include('partials/header') %>
+   
+
+
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                <li><br><br><br><br><br><br><br><br><br><br></li>
+                <li><a class = link href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a class = link href = "Login">Have a pet to give away</a></li>
+                <li><a id = alink href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+    
+
+    <div class="content">
+        <h1 >Here is our information; </h1>
+        <p id="ContactUs">
+            Student id: 40231764
+            <br>
+            Name: Maëlle Gaïa Fieffé-Bédard
+            <br>
+            Email: maelle.fbedard@gmail.com
+            <br><br>
+            Thank you for reaching out we will respond as promtly as possible!
+
+        </p>
+
+    </div>
+
+    <%- include('partials/footer') %>
+   
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        checkSession();
+    });
+        
+        
+        function checkSession()
+        {
+            fetch('/check-session', {method: 'POST'})
+            .then(response => response.json())
+            .then(data => {
+                if (data.loggedIn === true) {
+                    window.location.href = 'GiveAway'
+                 } 
+                 else 
+                {
+                    return;
+                }
+            })
+            .catch(error => console.error('Error checking session:', error)); 
+        }
+        
+            </script>
+        
+
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload = "checkSession()" >
+   
+   
+    <%- include('partials/header') %>
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                
+               <li> <br><br><br><br><br><br><br><br> <br> <br></li>
+                <li><a class = link href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a id = alink href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+    
+
+    <div class="content" id = "login">
+        
+        <form id = "LoginForm">
+            <p> Please Log in to your account if you have none go to the <a href="CreateAccount">Create Account</a> page</p>
+            
+            <br><br>
+
+            <label for = "userL">Username: </label>
+         <input id = "userL" type = text>  
+        
+         <br><br>        
+
+        <label for = "passL">Password: </label>
+            <input id = "passL" type = text> 
+        <br><br>
+            <button type ="submit" class ="button">Log in</button>
+        </form>
+        
+        <script>
+            document.getElementById('LoginForm').addEventListener('submit',function(event)
+{
+    event.preventDefault();
+    submitLogin();
+
+})
+        </script>
+    
+    </div>   
+
+    <%- include('partials/footer') %>
+   
+</body>
+</html>

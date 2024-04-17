@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatCare</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload="showTime()">
+   
+<%- include('partials/header') %>
+   
+
+
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                <li><br><br><br><br><br><br><br><br><br><br></li>
+                <li><a class = link href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a id = alink href = "CatCare">Cat care</a></li>
+                <li id = specal><a class = link href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+        
+
+    <div class="content">
+        
+        <h1>Here is how you take care of a cat;</h1>
+<table>
+
+    <tr>
+            <th><p id = "blurbs">
+            Caring for cats involves several key practices to ensure their health and happiness. 
+            Firstly, provide a balanced diet suited to their age, health, and lifestyle; consult with a veterinarian to choose the best food.
+             Regular veterinary checkups are crucial to monitor their health and keep vaccinations up to date. 
+        </p></th>
+    <th><img src = "SoggyMarty.jpg" alt = "picture of a wet cat" ></th>
+    </tr>
+</table>
+    </div>
+
+    <%- include('partials/footer') %>
+   
+
+</body>
+</html>

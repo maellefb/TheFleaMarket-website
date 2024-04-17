@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload="showTime()">
+   
+   
+    <%- include('partials/header') %>
+   
+
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+               <li> <br><br><br><br><br><br><br><br><br> <br></li>
+                <li><a class = link href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a id = alink href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+  
+
+    <div class="content">
+        
+        <fieldset>
+                <legend>Fill this form to register your pet with us</legend>
+            <form id = "formsg" onsubmit="formValidations()" >
+           <br>
+              
+           <p id = "forgotCoD" class="forgot"></p>
+           <p> Is your pet a cat or a dog?</p>
+            
+                    <input name = "CoD" type = "radio"  id = "cat" class = "CoD" value = "Cat">
+                        <label for = "cat"> Cat </label>
+
+                    <input name = "CoD" type = "radio"  id = "dog" class = "CoD" value = "Dog">
+                        <label for = "dog"> Dog </label>
+
+           <br><br>
+            
+                <p id = "forgotTypeg1" class="forgot"></p>    
+           <p>What breed is your pet (this section only applies for cats) </p> 
+           <input name = "type" type = "radio"  id = "Mainecoon" value = "Mainecoon">
+            <label for = "Mainecoon"> Mainecoon </label>
+
+            <input type = "radio"  id = "Sphinx" name = "type" value = "Sphinx">
+            <label for = "Sphinx"> Sphinx </label>
+            
+            <input name = "type" type = "radio"  id = "bcat" value = "Black Cat">
+            <label for = "bcat"> Black cat </label>
+
+            <input type = "radio"  id = "ocat" name = "type" value = "Orange Cat">
+            <label for = "ocat"> Orange cat </label>
+            
+            <input type = "radio"  id = "tabby" name = "type" value = "Tabby">
+            <label for = "tabby"> Tabby </label>
+            
+            <input type = "radio"  id = "DNM" name = "type" value = "Other" >
+            <label for = "DNM"> Other </label>
+            
+                
+            <br><br>
+
+            
+            <p> What breed is your dog</p> 
+            <input name = "type" type = "radio"  id = "German-Shepard" value = "German-Shepard">
+             <label for = "German-Shepard"> German-Shepard </label>
+ 
+             <input type = "radio"  id = "Bulldog" name = "type" value = "Bulldog">
+             <label for = "Bulldog"> BullDog </label>
+             
+            
+             <input name = type type = "radio"  id = "Labrador" value = "Labrador">
+             <label for = "Labrador"> Labrador </label>
+ 
+             <input type = "radio"  id = "Poodle" name = "type" value = "Poodle">
+             <label for = "Poodle"> Poodle </label>
+             
+             <input type = "radio"  id = "DNM1" name = "type" value = "Other">
+             <label for = "DNM1"> Other </label>
+             
+            
+             
+             <br><br>
+
+            <label for="age"> What age Category is your pet in  </label>
+            <select id = "age" name = "age">
+                <option value="Kitten or Puppy">  kitten or puppy </option>
+                <option value = "1-2 y/o"> 1-2 years old</option>
+                <option value = "2-4 y/o"> 2-4 years old</option>
+                <option value = "4-8 y/o"> 4-8 years old</option>
+                <option value = "8-10 y/o"> 8-10 years old </option>
+                <option value = "10+ y/o"> 10+ years old</option>
+        
+            </select> 
+
+            <br><br>
+                
+            <p id = "forgotGenderg" class="forgot"></p>
+            <p> What gender is your pet  </p>
+                <input type = "radio" name = "gender" id = "F" value="F">
+            <label for = "F"> Female </label>
+                <input type = "radio" name = "gender" id = "M" value="M">
+            <label for = "M">  Male </label>    
+                <input type = "radio" name = "gender" id = "O" value="O">
+            <label for = "O">  Other </label>    
+            
+          
+          <br><br>  
+
+        <p>Who does your pet get along with  </p> 
+             
+        <input type = "checkbox" id = "Cats" name = "along" value = "Cats"> <label for = "Cats"> Cats</label> 
+
+        <input type = "checkbox" id = "Dogs"name = "along" value = "Dogs"> <label for = "Dogs"> Dogs </label> 
+
+        <input type = "checkbox" id = "Children"name = "along" value = "Children"> <label for = "Children"> Children</label> 
+        
+        <br><br>
+        
+        <p id = "forgotInfo" class="forgot"></p>
+            
+        <p>Let us know how great your pet is down below!</p>
+
+            <textarea id ="petInfo"></textarea>
+
+        <br><br>
+
+            <p>Enter your information below: </p>
+
+            <p id = "forgotlName" class="forgot"></p>
+            
+        <label for = "lname">name: </label>
+            <input id = lname type = text>
+            <br>
+            <p id = "forgotfName" class="forgot"></p>  
+        <label for = "fname">surname:</label>
+            <input id = "fname" type = text> 
+            <br>
+     
+            <p id = "forgotEmail" class="forgot"></p>
+        <label>email:</label>
+            <input type = "email" id="email">
+            <br><br><br>
+        
+        <input  class = button type = "submit">
+        <input class = button type = "reset">
+        <button type = button class = "button" onclick="logOut()";> Log Out</button>
+        </form>
+    </fieldset> 
+    </div>
+
+    <script>
+        
+        document.getElementById('formsg').addEventListener('submit',function(event)
+{
+    event.preventDefault();
+   
+    let result =  formValidations();
+    if(result === false)
+    {
+        
+    }
+    else 
+    {
+       formSubmition(result); 
+    }
+
+});
+    </script>
+
+<%- include('partials/footer') %>
+   
+</body>
+</html>

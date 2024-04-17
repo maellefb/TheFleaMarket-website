@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload = "showTime()">
+    <%- include('partials/header') %>
+   
+
+
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                
+               <li> <br><br><br><br><br><br><br><br> <br> <br></li>
+                <li><a class = link href = "Home.">Home page</a></li>
+                <li><a id = alink href = "CreateAccount">Create Account</a></li>
+                <li><a class = link href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a class = link href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+    
+
+    <div class="content">
+       
+        <table>
+
+            <tr>
+                 <td>
+                 <form id = "usernameForm">
+                    <label for = "username">Username: </label>
+                 <input id = "username" type = text>  
+        
+                 <br><br>
+
+                <label for = "password">Password: </label>
+                <input id = "password" type = text> 
+                <br><br>
+                <button type ="submit" class ="button">Register</button>
+            </form>
+            </td>
+
+                <td style = "padding: 20px;" >
+                 <p>Username can only contain letter (upper or lowercase) and digits</p>
+                 <br>
+                 <p>Password must be at least 4 char long and are to be letters and digits only</p>
+                 <p>however they must have at least one letter and one digit</p>
+                </td>    
+            </tr>
+    </table>
+    </div>
+    
+
+    <%- include('partials/footer') %>
+   
+</body>
+</html>

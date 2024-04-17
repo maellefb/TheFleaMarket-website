@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="public/Home.css"/> 
+ 
+<script>
+   function startTime() {
+       const today = new Date();
+       let h = today.getHours();
+       let m = today.getMinutes();
+       let s = today.getSeconds();
+       m = checkTime(m);
+       s = checkTime(s);
+       document.getElementById('date').innerHTML = h + ":" + m + ":" + s;
+       setTimeout(startTime, 1000);
+   }
+
+   function checkTime(i) {
+       if (i < 10) { i = "0" + i; } 
+       return i;
+   }
+
+   
+   window.onload = function() {
+       startTime();
+   };
+</script>
+
+
+   <style>
+.header
+{
+    font-size: 30px;
+    color:rgb(190, 156, 198);
+    background-color: rgb(79, 55, 85);
+    padding: 25px;
+    position:fixed;
+    text-align: center; 
+    width:100%;
+
+}
+   </style>
+
+   
+    <div class = "header">
+       <p id = "date"></p>
+        <a href = "Home" id = logo><img src = "Marty2.jpg" width = "100" height = "100" alt = "no image found"></a>
+        <h1> 
+           The Flea Market
+        </h1>
+    </div>
+
+

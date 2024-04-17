@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Pet</title>
+    <link rel="stylesheet" href="Home.css"/> 
+    <script defer src = "Home.js"></script>
+
+</head>
+<body onload="showTime()">
+   
+    <%- include('partials/header') %>
+
+    <div class = "sideMenu">
+        <nav>
+            <ul>
+                <li><br><br><br><br><br><br><br><br><br> <br></li>
+                <li><a class = link href = "Home">Home page</a></li>
+                <li><a class = link href = "CreateAccount">Create Account</a></li>
+                <li><a id = alink href = "FindAPet">Find a pet</a></li>
+                <li><a class = link href = "DogCare">Dog care</a></li>
+                <li><a class = link href = "CatCare">Cat care</a></li>
+                <li><a class = link href = "Login">Have a pet to give away</a></li>
+                <li><a class = link href="ContactUs">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+    
+
+    <div class="content">
+        
+        <fieldset>
+                <legend>Fill this form out to find the dog of your dreams</legend>
+            <form id = "forms" onsubmit="formValidation()">
+           <br>
+           <p id = "forgotCoD" class="forgot"></p>
+           <p> Is your pet a cat or a dog?</p>
+            
+                    <input name = "CoD" type = "radio"  id = "cat" class = "CoD" value = "Cat">
+                        <label for = "cat"> Cat </label>
+
+                    <input name = "CoD" type = "radio"  id = "dog" class = "CoD" value = "Dog">
+                        <label for = "dog"> Dog </label>
+
+           <br><br>
+           <p id = "forgotTypeg1" class="forgot"></p>    
+           <p>What breed is the cat you are looking for (this section only applies for cats) </p> 
+           <input name = "type" type = "radio"  id = "Mainecoon" value = "Mainecoon">
+            <label for = "Mainecoon"> Mainecoon </label>
+
+            <input type = "radio"  id = "Sphinx" name = "type" value = "Sphinx">
+            <label for = "Sphinx"> Sphinx </label>
+            
+            <input name = "type" type = "radio"  id = "bcat" value = "Black Cat">
+            <label for = "bcat"> Black cat </label>
+
+            <input type = "radio"  id = "ocat" name = "type" value = "Orange Cat">
+            <label for = "ocat"> Orange cat </label>
+            
+            <input type = "radio"  id = "tabby" name = "type" value = "Tabby">
+            <label for = "tabby"> Tabby </label>
+            
+            <input type = "radio"  id = "DNM" name = "type" value = "Other" >
+            <label for = "DNM"> Other </label>
+            
+             
+            <br><br>
+
+            
+            <p> What breed is the dog you are looking for (this section only applies for cats)</p> 
+            <input name = "type" type = "radio"  id = "German-Shepard" value = "German-Shepard">
+             <label for = "German-Shepard"> German-Shepard </label>
+ 
+             <input type = "radio"  id = "Bulldog" name = "type" value = "Bulldog">
+             <label for = "Bulldog"> BullDog </label>
+             
+            
+             <input name = type type = "radio"  id = "Labrador" value = "Labrador">
+             <label for = "Labrador"> Labrador </label>
+ 
+             <input type = "radio"  id = "Poodle" name = "type" value = "Poodle">
+             <label for = "Poodle"> Poodle </label>
+             
+             <input type = "radio"  id = "DNM1" name = "type" value = "Other">
+             <label for = "DNM1"> Other </label>
+             
+            <br><br>
+
+            <label for="age"> What age Category do you want your dog to be in? </label>
+            <select id = "age">
+                <option value="Kitten or Puppy">  kitten or puppy </option>
+                <option value = "1-2 y/o"> 1-2 years old</option>
+                <option value = "2-4 y/o"> 2-4 years old</option>
+                <option value = "4-8 y/o"> 4-8 years old</option>
+                <option value = "8-10 y/o"> 8-10 years old </option>
+                <option value = "10+ y/o"> 10+ years old</option>
+        
+            </select> 
+
+            <br><br>
+           
+            <p id = "forgotGender" class="forgot"></p>
+            <p> What do you want the gender of your dog to be; </p>
+            <input type = "radio" name = "gender" id = "F" value = "F">
+        <label for = "F"> Female </label>
+           
+            <input type = "radio" name = "gender" id = "M" value = "M">
+        <label for = "M">  Male </label>    
+          
+            <input type = "radio" name = "gender" id = "DNM2" value = "O">
+        <label for =  "DNM2"> Does not Matter</label>
+        <br><br>
+
+        <p>Who does your dog need to get along with? </p> 
+             
+        <input type = "checkbox" id = "Cats" value ="Cats" name = "friendly"> <label for = "Cats"> Cats</label>
+
+        <input type = "checkbox" id = "Dogs" value =" Dogs" name = "friendly"> <label for = "Dogs"> Other dogs </label>
+
+        <input type = "checkbox" id = "Children" value = "Children" name = "friendly"> <label for = "Children"> Children</label> 
+        
+        <br><br><br>
+        
+        <input class = button type = "submit">
+        <input class = button type = "reset">
+               
+        </form>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+        <h1>Here is what our databass found</h1>
+        <div id = "display">
+          <p id = "content">
+
+          </p>
+        </div>
+    </fieldset>
+
+</div>
+
+
+    <script>
+        
+        document.getElementById('forms').addEventListener('submit',function(event)
+{
+    event.preventDefault();
+   
+    let result =  formValidation();
+    if(result === false)
+    {
+    
+    }
+    else 
+    {
+       findPet(result); 
+    }
+
+});
+    </script>
+
+    <%- include('partials/footer') %>
+   
+</body>
+</html>
