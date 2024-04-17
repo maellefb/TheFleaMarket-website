@@ -46,7 +46,7 @@ app.get('/BrouwseAvailablePets',(req,res) =>
 });
 
 
-app.get('/home',(req,res) =>
+app.get('/Home',(req,res) =>
 {
     res.render('Home')
 });
@@ -56,9 +56,9 @@ app.get('/CatCare',(req,res) =>
     res.render('CatCare');
 });
 
-app.get('/ContactUS',(req,res) =>
+app.get('/ContactUs',(req,res) =>
 {
-    res.render('ContactUS');
+    res.render('ContactUs');
 });
 
 app.get('/CreateAccount',(req,res) =>
@@ -88,7 +88,7 @@ app.get('/Login',(req,res) =>
 
 app.get('/TermsAndConditions',(req,res) =>
 {
-    res.render('ContactUS');
+    res.render('TermsAndConditions');
 });
 
 
