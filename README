@@ -1,27 +1,2 @@
-I did not have the time to figure out how to set up a server, as I have been having mental health issues as well as being bed-ridden sick for a week, therefore missing the classes that where on this subject, and I simply don't have any more time to commit to this assignment as I have to study for my other classes. 
-I did my best with the time and resources. 
-
-The code does eveything that is asked for except for deploying, if you depoy it locally it will work. 
-
-here is how you do it  from visual-studio-code
-1. open a new terminal 
-2. using the "cd" command move through your files to be able to acess the inside of my file directory
-3. ex: cd assignment3_40231764
-4.     cd Question4
-5. once you are in the right directory go to the server.js file
-6. if you already know what PORT is available on your computer then change the PORT with that one if not 
-7. if not enter : netstat -aon or netstat -aon | findstr :5004
-8. this will show you all the taken up port or will show you if the port that is currently connected is taken up. 
-9. if there is no result then your good and you can use 5004
-10. if not then enter:  taskkill /F /PID (pid number)
-11. found: 
-TCP    0.0.0.0:5004           0.0.0.0:0              LISTENING       17836
-  TCP    [::]:5004              [::]:0                 LISTENING       17836
-
-  after listening: 
-12. ex: taskkill /F /PID 17836
-13. once this is done go to the terminal where you should be in the directory that you nagivated to and enter. 
-node server.js
-14. this should give you a link to a local website where my website will be deployed. 
-
-i'm very sorry for this inconvenience; if you have any more questions please reach out to me by:    maelle.fbedard@gmail.com
+This is a website assignement made for class. 
+The following is the link to access the website: https://a3-thefleamarket-1.onrender.com
